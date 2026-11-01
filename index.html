@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Umbrella Check</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main id="wrapper">
+      <h1>Umbrella Check</h1>
+
+      <form id="check-form">
+        <label>
+          City
+          <select id="city">
+            <option value="seoul">Seoul</option>
+            <option value="busan">Busan</option>
+            <option value="jeju">Jeju</option>
+          </select>
+        </label>
+        <label>
+          Rain chance &ge;
+          <input id="threshold" type="number" value="50"
+            min="0" max="100" required /> %
+        </label>
+        <button type="submit">Check</button>
+      </form>
+
+      <p id="status"></p>
+      <p id="summary"></p>
+
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Min</th><th>Max</th><th>Rain</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+
+      <footer>Weather data by Open-Meteo.com</footer>
+    </main>
+  </body>
+</html>
