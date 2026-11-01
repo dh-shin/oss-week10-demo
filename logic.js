@@ -15,3 +15,10 @@ export function summarize(days, threshold) {
   const wet = days.filter((day) => needsUmbrella(day, threshold));
   return `umbrella on ${wet.length} of ${days.length} days`;
 }
+
+export function tempRange(days) {
+  if (days.length === 0) return null;
+  const mins = days.map((day) => day.min);
+  const maxes = days.map((day) => day.max);
+  return { min: Math.min(...mins), max: Math.max(...maxes) };
+}
