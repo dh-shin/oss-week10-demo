@@ -8,7 +8,7 @@ export function toDays(daily) {
 }
 
 export function needsUmbrella(day, threshold) {
-  return day.rain >= threshold;
+  return day.rain > threshold;
 }
 
 export function summarize(days, threshold) {
